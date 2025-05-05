@@ -33,6 +33,16 @@ class _LoginPageState extends State<LoginPage> {
         .toColor();
 
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Goes back to the previous screen
+          },
+        ),
+        title: const Text('Login Page'),
+        backgroundColor: const Color(0xFF660033), // Match your theme
+      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
